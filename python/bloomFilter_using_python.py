@@ -41,7 +41,7 @@ class BloomFilter(object):
 			
 			# i here serves as the seed
 			digest = mmh3.hash(item,i) % self.size
-			digests.append(digest)
+			digests	.append(digest)
 
 			self.bit_array[digest] = True
 
@@ -52,7 +52,7 @@ class BloomFilter(object):
 			digest = mmh3.hash(item,i) % self.size 
 
 			if self.bit_array[digest] == False :
-				# basic logic -> if any bit is false, then it is not present in th filter... else there is probablility it is present
+				#  if any bit is false, then it is not present in the filter... else there is probablility it is present
 
 				return False
 			

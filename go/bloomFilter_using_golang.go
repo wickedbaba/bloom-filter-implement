@@ -24,12 +24,12 @@ func hash1(word string, arrSize int64) int64 {
 	for i := 0; i < len(word); i++ {
 
 		pl("here", word[i:i+1], reflect.TypeOf(word[i:i+1]))
-		// intConver, err := strconv.Atoi(word[i : i+1])
-		// errorCheck(err)
-		// pl("here")
+		intConver, err := strconv.Atoi(word[i : i+1])
+		errorCheck(err)
+		pl("here")
 
-		// wordHash = (wordHash + int64(intConver))
-		// wordHash %= arrSize
+		wordHash = (wordHash + int64(intConver))
+		wordHash %= arrSize
 
 	}
 
